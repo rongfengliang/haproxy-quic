@@ -18,7 +18,7 @@ RUN git clone https://github.com/quictls/openssl && \
    cd openssl && \
    mkdir -p /opt/quictls/ssl && \ 
     ./Configure --libdir=lib --prefix=/opt/quictls && \
-   make && make install && echo /opt/quictls/lib | sudo tee -a /etc/ld.so.conf
+   make && make install && echo /opt/quictls/lib |  tee -a /etc/ld.so.conf
 RUN ldconfig
 
 
